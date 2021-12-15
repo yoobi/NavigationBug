@@ -31,5 +31,4 @@ class MainActivity : AppCompatActivity() {
             binding.toolbar.title = destination.label
         }
     }
-
 }
