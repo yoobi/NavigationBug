@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sample"
+    app:startDestination="@id/frag_home">
+
+    <fragment
+        android:id="@+id/frag_home"
+        android:name="eu.rekisoft.android.navbug.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/cause_bug"
+            app:destination="@id/frag_hint"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/frag_hint"
+        android:name="eu.rekisoft.android.navbug.HintFragment"
+        android:label="Hint"
+        tools:layout="@layout/fragment_hint"/>
+
+    <fragment
+        android:id="@+id/frag_second"
+        android:name="eu.rekisoft.android.navbug.SecondFragment"
+        android:label="Second Fragment"
+        tools:layout="@layout/fragment_second"/>
+
+</navigation>
