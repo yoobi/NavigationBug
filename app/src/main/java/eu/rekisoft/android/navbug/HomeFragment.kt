@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import eu.rekisoft.android.navbug.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
     override fun onCreateView(
@@ -14,9 +14,13 @@ class HomeFragment : Fragment() {
     ): View = inflater.inflate(R.layout.fragment_home, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(android.R.id.button1).setOnClickListener {
-            findNavController().navigate(HomeFragmentDirections.causeBug())
+        with(FragmentHomeBinding.bind(view)) {
+            button1.setOnClickListener {
+                findNavController().navigate(HomeFragmentDirections.causeBug())
+            }
+            button2.setOnClickListener {
+                findNavController().navigate(HomeFragmentDirections.causeCrash("Let me crash"))
+            }
         }
     }
 }

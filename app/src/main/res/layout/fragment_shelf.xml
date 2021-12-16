@@ -6,20 +6,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".HomeFragment">
+    tools:context=".ShelfFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Example Books:" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@android:id/button1"
-        android:text="Open Hint Fragment" />
+        android:id="@+id/book1"
+        android:text="Book 1"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@android:id/button2"
-        android:text="Deeplink crash" />
+        android:id="@+id/book2"
+        android:text="Book 2"/>
 
 </LinearLayout>
