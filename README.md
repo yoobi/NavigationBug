@@ -1,6 +1,8 @@
 # Navigation components bug report
 
-Reported on Android issue tracker: #[210687967](https://issuetracker.google.com/issues/210687967)
+Reported on Android issue tracker: [210687967](https://issuetracker.google.com/issues/210687967)
+
+I applied the suggestions from the bug tracker. The original code can be found [here](https://github.com/rekire/NavigationBug/tree/original_report).
 
 Component used: Navigation  
 Version used: 2.4.0-beta02  
