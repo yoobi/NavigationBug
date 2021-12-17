@@ -8,7 +8,8 @@
 
     <navigation
         android:id="@+id/tab_home"
-        app:startDestination="@id/frag_home">
+        app:startDestination="@id/frag_home"
+        >
         <fragment
             android:id="@+id/frag_home"
             android:name="eu.rekisoft.android.navbug.HomeFragment"
@@ -54,6 +55,34 @@
             android:name="eu.rekisoft.android.navbug.BookFragment"
             android:label="Book Fragment"
             tools:layout="@layout/fragment_book">
+            <argument
+                android:name="name"
+                app:argType="string"/>
+        </fragment>
+    </navigation>
+
+    <navigation
+        android:id="@+id/tab_more"
+        app:startDestination="@id/dialog_more">
+        <dialog
+            android:id="@+id/dialog_more"
+            android:name="eu.rekisoft.android.navbug.MoreDialog"
+            android:label="More Dialog"
+            tools:layout="@layout/dialog_more">
+            <action
+                android:id="@+id/open_sub_menu"
+                app:destination="@id/frag_sub_menu">
+                <argument
+                    android:name="name"
+                    app:argType="string"/>
+            </action>
+        </dialog>
+
+        <fragment
+            android:id="@+id/frag_sub_menu"
+            android:name="eu.rekisoft.android.navbug.SubMenuFragment"
+            android:label="SubMenu Fragment"
+            tools:layout="@layout/fragment_sub_menu">
             <argument
                 android:name="name"
                 app:argType="string"/>
